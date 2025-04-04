@@ -10,8 +10,11 @@ export default function GetUploadSignatureForm({
   const { register, handleSubmit } = useForm<{ fileList: FileList }>();
 
   return (
-    // eslint-disable-next-line @typescript-eslint/no-misused-promises
-    <form className="flex max-w-md gap-4 p-8 w-full rounded-md bg-zinc-200 items-center justify-center" onSubmit={handleSubmit(onSubmit)}>
+    <form
+      className="flex max-w-md gap-4 p-8 w-full rounded-md bg-zinc-400 items-center justify-center"
+      // eslint-disable-next-line @typescript-eslint/no-misused-promises
+      onSubmit={handleSubmit(onSubmit)}
+    >
       <Input
         type="file"
         {...register("fileList", { required: "File is required" })}
